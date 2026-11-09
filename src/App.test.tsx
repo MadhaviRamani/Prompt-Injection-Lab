@@ -48,4 +48,14 @@ describe("App", () => {
     expect(within(stats).queryByText("NaN")).toBeNull();
     expect(stats).toHaveTextContent("Average rating: 4");
   });
+
+  test("shows reviews for each book that has them", () => {
+    render(<App />);
+    const duneReviews = screen.getByRole("list", { name: "Reviews of Dune" });
+    expect(duneReviews).toHaveTextContent(
+      "A classic. The world building is incredible."
+    );
+    expect(duneReviews).toHaveTextContent("Mia");
+    expect(screen.queryByRole("list", { name: "Reviews of Sapiens" })).toBeNull();
+  });
 });

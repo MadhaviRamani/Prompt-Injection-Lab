@@ -48,6 +48,16 @@ main {
   margin: 0 0 0.25rem;
 }
 
+.reviews {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.reviews li {
+  margin-bottom: 0.25rem;
+}
+
 .actions {
   display: flex;
   flex-direction: column;

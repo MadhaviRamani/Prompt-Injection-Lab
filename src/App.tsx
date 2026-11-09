@@ -3,6 +3,7 @@ import { filterBooks, removeBook, toggleRead } from "./books";
 import BookList from "./components/BookList";
 import Stats from "./components/Stats";
 import { initialBooks } from "./data";
+import { reviews } from "./reviews";
 import type { Book, GenreFilter } from "./types";
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
       <Stats books={books} />
       <BookList
         books={visibleBooks}
+        reviews={reviews}
         onToggleRead={handleToggleRead}
         onRemove={handleRemove}
       />
